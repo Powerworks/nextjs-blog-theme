@@ -1,4 +1,4 @@
-export default function ArrowIcon({ className, color = 'text-primary' }) {
+export default function ArrowIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ export default function ArrowIcon({ className, color = 'text-primary' }) {
       className={className}
     >
       <path
-        className={`stroke-current ${color}`}
+        className="stroke-current text-primary"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

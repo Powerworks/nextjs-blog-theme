@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #7D7AFF;
+  --color-gradient-1: #7d7aff;
+  --color-gradient-2: #2121e2;
+  --color-gradient-3: #00fff0;
+  --color-gradient-4: #8785FF;
+
+  --font-primary: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-secondary: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --breakpoint-3xl: 64rem;
+
+  --radius-3xl: 1rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-compiled {
+  --color-primary: var(--color-primary);
+  --color-gradient-1: var(--color-gradient-1);
+  --color-gradient-2: var(--color-gradient-2);
+  --color-gradient-3: var(--color-gradient-3);
+  --color-gradient-4: var(--color-gradient-4);
+  --font-primary: var(--font-primary);
+  --font-secondary: var(--font-secondary);
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+.light {
+  color-scheme: light;
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility bg-gradient-conic {
+  background-image: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+}
